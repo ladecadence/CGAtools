@@ -24,11 +24,18 @@ and writes a text representation of the fontset, drawing
 patterns of the bits on the ROM in the text file so you can
 easily change them.
 
-createCGA font, on the other way, takes this text file
+createCGAfont, on the other way, takes this text file
 containing the representation of the charset, and creates
 a binary file, suitable to be burned on a EPROM, so you
 can replace the original character ROM, modifying the CGA 
 fontset.
+
+
+COMPILE
+-------
+
+Use "make" under unix with gcc installed, or "make dos" under
+DOS with TurboC installed and on path.
 
 
 USE
@@ -45,6 +52,8 @@ representation of it.
 
 takes the text representation of the charset and creates
 the binary file suitable to be burned in an EPROM.
+
+(on DOS programs are called EXTRACT.EXE and CREATE.EXE)
 
 
 LICENSE
