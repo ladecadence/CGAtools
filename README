@@ -1,0 +1,66 @@
+  ____ ____    _   _              _     
+ / ___/ ___|  / \ | |_ ___   ___ | |___ 
+| |  | |  _  / _ \| __/ _ \ / _ \| / __|
+| |__| |_| |/ ___ \ || (_) | (_) | \__ \
+ \____\____/_/   \_\__\___/ \___/|_|___/
+                                        
+
+(C) David Pello 2010
+http://ladecadence.net
+
+
+INTRODUCTION
+------------
+
+CGAtools is aset of tools to manipulate CGA character
+set. The main purpose is to modify or create the fontset
+of the original IBM CGA card of comparibles.
+
+As of version 0.1, there are two tools available, 
+extractCGAfont and createCGAfont.
+
+extractCGAfont takes a binary dump of the CGA character ROM
+and writes a text representation of the fontset, drawing
+patterns of the bits on the ROM in the text file so you can
+easily change them.
+
+createCGA font, on the other way, takes this text file
+containing the representation of the charset, and creates
+a binary file, suitable to be burned on a EPROM, so you
+can replace the original character ROM, modifying the CGA 
+fontset.
+
+
+USE
+---
+
+Both tools are self explaining:
+
+	extractCGAfont <input rom> <output txt>
+
+takes a binary dump of the rom and creates the text 
+representation of it.
+
+	createCGAfont <input txt> <output rom>
+
+takes the text representation of the charset and creates
+the binary file suitable to be burned in an EPROM.
+
+
+LICENSE
+-------
+
+This tools are under the GNU GPL v3 license.
+See the LICENSE file.
+
+
+THANKS
+------
+
+Thanks to JoJo for all the support and for the XT I'm working on,
+and to all the vieju.net people.
+
+CHANGELOG
+---------
+
+V.01 : Initial version
