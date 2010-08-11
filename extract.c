@@ -19,7 +19,8 @@ int 	c;
 /* converts one byte to it's text representation */
 void byte2txt(char data, char ret[8])
 {
-	int i, n;
+	int i; 
+    unsigned char n;
 
 	for (i=0; i<=7; i++)
 	{
@@ -48,7 +49,7 @@ int main(int argc, char* argv[])
 	}
 
 	/* Open files */
-	input = fopen(argv[1], "r");
+	input = fopen(argv[1], "rb");
 	if (input == NULL)
 		printf("Can't open input file\n");
 
@@ -59,16 +60,12 @@ int main(int argc, char* argv[])
 	/* main loop */
 	/* read a byte from the input, convert it to text */
 	/* and write it to a line on the output */
-	while (!feof(input))
+	while ((c=fgetc(input))!=EOF)
 	{
-		c = fgetc(input);
-		
-		if (c != EOF)	
-		{
-			byte2txt(c, line);
-			fprintf(output, "%s%s", line, __EOL);
-			count++;
-		}
+		byte2txt((char)c, line);
+		fputs(line, output);
+		fputs("\n", output);
+		count++;
 
 	}
 	

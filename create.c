@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
 	if (input == NULL)
 		printf("Can't open input file\n");
 
-	output = fopen(argv[2], "w");
+	output = fopen(argv[2], "wb");
     if (output == NULL)
         printf("Can't open output file\n");
 
