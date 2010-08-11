@@ -74,9 +74,13 @@ int main(int argc, char* argv[])
 	{
 		if (fgets(buffer, 255, input) != NULL)
 		{
-			strncpy(line, buffer, 8);
-			fputc(txt2byte(line), output);
-			count++;
+			/* ignore empty lines */
+			if (strcmp(buffer, "\n") != 0)
+			{
+				strncpy(line, buffer, 8);
+				fputc(txt2byte(line), output);
+				count++;
+			}
 		}
 	}
 	

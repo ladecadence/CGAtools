@@ -66,6 +66,8 @@ int main(int argc, char* argv[])
 		fputs(line, output);
 		fputs("\n", output);
 		count++;
+		if (count%8 == 0)
+			fputs("\n", output);
 
 	}
 	
