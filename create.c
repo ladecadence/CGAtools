@@ -10,9 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#define _BINARY_HIGH	'#'
-#define _BINARY_LOW		'.'
+#include "cgatools.h"
 
 FILE* 	input;
 FILE*	output;

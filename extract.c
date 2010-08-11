@@ -10,9 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
-#define _BINARY_HIGH	'#'
-#define _BINARY_LOW		'.'
+#include "cgatools.h"
 
 FILE* 	input;
 FILE*	output;
@@ -68,7 +66,7 @@ int main(int argc, char* argv[])
 		if (c != EOF)	
 		{
 			byte2txt(c, line);
-			fprintf(output, "%s\n", line);
+			fprintf(output, "%s%s", line, __EOL);
 			count++;
 		}
 
