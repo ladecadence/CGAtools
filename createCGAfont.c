@@ -77,9 +77,7 @@ int main(int argc, char* argv[])
 		if (fgets(buffer, 255, input) != NULL)
 		{
 			strncpy(line, buffer, 8);
-			
 			fputc(txt2byte(line), output);
-
 			count++;
 		}
 	}
